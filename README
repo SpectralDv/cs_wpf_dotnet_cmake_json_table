@@ -3,7 +3,7 @@ https://learn.microsoft.com/ru-ru/dotnet/fundamentals/
 https://learn.microsoft.com/ru-ru/dotnet/core/sdk
 https://learn.microsoft.com/ru-ru/dotnet/core/install/windows?WT.mc_id=dotnet-35129-website#install-with-windows-package-manager-winget
 
-# 1.утсановка пакетов лоя сборки
+# 1.утсановка пакетов для сборки
 winget install
 winget install Microsoft.DotNet.SDK.8
 winget install Microsoft.DotNet.DesktopRuntime.8
@@ -39,4 +39,3 @@ dotnet clean && dotnet build -c Release
   <ItemGroup>
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
   </ItemGroup>
-  
