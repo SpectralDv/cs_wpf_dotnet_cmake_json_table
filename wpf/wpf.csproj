@@ -1,0 +1,63 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- <ItemGroup>
+    <ProjectReference Include="..\libcore\libcore.csproj" />
+  </ItemGroup> -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>wpf</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+    <PackageReference Include="ResXResourceReader.NetStandard" Version="1.1.0" />
+    <PackageReference Include="Xam.Plugin.EmbeddedResource" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\lang_en_us.resx" />
+    <Resource Include="Resources\lang_ru_ru.resx" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+  </ItemGroup>
+
+
+<!-- <ItemGroup>
+  <Compile Update="Data\DataResource.Designer.cs">
+    <DesignTime>True</DesignTime>
+    <AutoGen>True</AutoGen>
+    <DependentUpon>DataResource.resx</DependentUpon>
+  </Compile>
+</ItemGroup> -->
+
+<!-- <ItemGroup>
+  <EmbeddedResource Update="Resources\lang.resx">
+    <Generator>ResXFileCodeGenerator</Generator>
+    <LastGenOutput>DataResource.Designer.cs</LastGenOutput>
+  </EmbeddedResource>
+</ItemGroup> -->
+
+
+  <!-- <ItemGroup>
+    <EmbeddedResource Update="Resources\****.resx">
+      <DependentUpon>***.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup> -->
+
+
+  <!-- <ItemGroup>
+    <EmbeddedResource Include="Resources\lang.resx" />
+  </ItemGroup> -->
+
+  <!-- <PropertyGroup>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+  </PropertyGroup> -->
+
+</Project>

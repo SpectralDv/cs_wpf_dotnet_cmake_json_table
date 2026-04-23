@@ -1,0 +1,38 @@
+
+https://learn.microsoft.com/ru-ru/dotnet/fundamentals/
+https://learn.microsoft.com/ru-ru/dotnet/core/sdk
+https://learn.microsoft.com/ru-ru/dotnet/core/install/windows?WT.mc_id=dotnet-35129-website#install-with-windows-package-manager-winget
+
+winget install
+winget install Microsoft.DotNet.SDK.8
+winget install Microsoft.DotNet.DesktopRuntime.8
+winget install Microsoft.DotNet.AspNetCore.8
+winget search Microsoft.DotNet.SDK
+dotnet add package Microsoft.Xaml.Behaviors.Wpf
+dotnet add package Newtonsoft.Json
+dotnet add package System.Windows.Forms
+
+$env:DOTNET_ROOT = "C:\Program Files\dotnet"
+$env:PATH = "$env:DOTNET_ROOT;$env:PATH"
+
+cd wpf
+rm -r -fo build
+cmake -B build -A Win32
+cmake -B build -G "Visual Studio 17 2022" -A Win32
+cmake --build build --config Release
+
+cd wpf
+rm -r -fo build
+//Сборка в Debug режиме
+dotnet build
+//Сборка в Release режиме
+dotnet build -c Release
+//Очистка и сборка заново
+dotnet clean && dotnet build -c Release
+
+10.Дополнительные настройки для сборки cmake
+/build/wpf.csproj
+  <UseWindowsForms>true</UseWindowsForms>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+  </ItemGroup>
